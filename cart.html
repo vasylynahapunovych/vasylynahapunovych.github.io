@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🔹 Верхнє меню -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">КАТАЛОГ</a></li>
+                <li>
+                    <a href="cart.html">КОШИК <span id="cart-count" class="cart-badge">0</span></a>
+                  </li> 
+                <li><a href="account.html">МІЙ АКАУНТ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Основний контент -->
+    <main>
+        <section class="cart">
+            <h1>Ваш Кошик</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Фото</th>
+                        <th>Назва</th>
+                        <th>Автор</th>
+                        <th>Ціна</th>
+                        <th>Кількість</th>
+                        <th>Дія</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr><td colspan="6">Ваш кошик порожній</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">Загальна сума:</td>
+                        <td id="total-price" style="font-weight: bold;">0 грн</td>
+                        <td>
+                          <div class="cart-buttons">
+                            <button class="clear-cart" onclick="clearCart()">Очистити кошик</button>
+                            <button class="checkout-btn" onclick="completeOrder()">Оформити замовлення</button>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                </tfoot>
+            </table>
+    
+        </section>
+    </main>
+    
+
+    <!-- 🔹 Футер -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Про нас</h3>
+                <p>Ми - онлайн-магазин книг, що пропонує
+                     широкий вибір літератури для всіх поколінь.</p>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Email: <a href="mailto:info@bookstore.com">info@bookstore.com</a></p>
+                <p>Телефон: <a href="tel:+380988112334">+380 988 112 334</a></p>
+                <p>Адреса: вул. Книжкова, 12, Київ</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 BookStore | Всі права захищені</p>
+        </div>
+    </footer>
+
+    <!-- 🔹 JavaScript для роботи кошика -->
+    <script src="cart.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+</html>

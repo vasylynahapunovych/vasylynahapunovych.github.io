@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог книг | Онлайн-магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+ <!-- 🔹 Верхня панель навігації -->
+ <header>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">КАТАЛОГ</a></li>
+            <li>
+                <a href="cart.html">КОШИК <span id="cart-count" class="cart-badge">0</span></a>
+              </li>
+            <li><a href="account.html">МІЙ АКАУНТ</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="book-list"></div>
+
+<!-- 🔹 Головний заголовок -->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">Ласкаво просимо в BookStore</h1>
+        <p class="hero-subtitle">Книги, що змінюють життя</p>
+        <a href="#catalog" class="hero-btn">Переглянути каталог</a>
+    </div>
+</section>
+
+<main>
+
+    <section class="recommended-section">
+        <div class="container">
+          <h2 class="section-title">Рекомендовані книги</h2>
+          <hr class="section-divider">
+          <div class="book-grid" id="recommended-books"></div>
+        </div>
+      </section>
+      
+   <!-- Каталог книг -->
+   <section id="catalog" class="catalog">
+    <div class="container">
+        <h2></h2>
+        <div class="book-grid">
+
+            <!-- Книга 1 -->
+            <div class="book-card">
+                <img src="images/harrypotter1.webp" alt="Гаррі Поттер">
+                <h3>Гаррі Поттер і філософський камінь</h3>
+                <p class="author">Дж. К. Ролінг</p>
+                <p class="price">350 грн</p>
+                <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+                <button onclick="addToCart(1, 'Гаррі Поттер і філософський камінь', 'Дж. К. Ролінг', 350)">Додати в кошик</button>
+            </div>
+            
+           <!-- Книга 2 -->
+           <div class="book-card">
+            <img src="images/mscwar.webp" alt="Мистецтво війни">
+            <h3>Мистецтво війни</h3>
+            <p class="author">Сунь-цзи</p>
+            <p class="price">200 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.5)</p>
+            <button onclick="addToCart(2, 'Мистецтво війни', 'Сунь-цзи', 200)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 3 -->
+        <div class="book-card">
+            <img src="images/1984go.webp" alt="1984">
+            <h3>1984</h3>
+            <p class="author">Джордж Орвелл</p>
+            <p class="price">280 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.7)</p>
+            <button onclick="addToCart(3, '1984', 'Джордж Орвелл', 280)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 4 -->
+        <div class="book-card">
+            <img src="images/alhimic.webp" alt="Алхімік">
+            <h3>Алхімік</h3>
+            <p class="author">Пауло Коельйо</p>
+            <p class="price">270 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.6)</p>
+            <button onclick="addToCart(4, 'Алхімік', 'Пауло Коельйо', 270)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 5 -->
+        <div class="book-card">
+            <img src="images/scarb.webp" alt="Таємничий острів">
+            <h3>Таємничий острів</h3>
+            <p class="author">Жюль Верн</p>
+            <p class="price">250 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.9)</p>
+            <button onclick="addToCart(5, 'Таємничий острів', 'Жюль Верн',250)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 6 -->
+        <div class="book-card">
+            <img src="images/sherlokhoms.webp" alt="Шерлок Голмс">
+            <h3>Шерлок Голмс</h3>
+            <p class="author">Артур Конан Дойл</p>
+            <p class="price">650 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(6, 'Шерлок Голмс', 'Артур Конан Дойл', 650)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 7 -->
+        <div class="book-card">
+            <img src="images/big_gedspi.jpg" alt="Великий Гетсбі">
+            <h3>Великий Гетсбі</h3>
+            <p class="author">Френсіс Скотт Фіцджеральд</p>
+            <p class="price">470 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.6)</p>
+            <button onclick="addToCart(7, 'Великий Гетсбі', 'Френсіс Скотт Фіцджеральд',470)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 8 -->
+        <div class="book-card">
+            <img src="images/gameoftrons.webp" alt="Гра престолів">
+            <h3>Гра престолів</h3>
+            <p class="author">Джордж Мартін</p>
+            <p class="price">900 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.9)</p>
+            <button onclick="addToCart(8, 'Гра престолів', 'Джордж Мартін',900)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 9 -->
+        <div class="book-card">
+            <img src="images/citygirls.jpg" alt="Місто дівчат">
+            <h3>Місто дівчат</h3>
+            <p class="author">Елізабет Ґілберт</p>
+            <p class="price">400 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.5)</p>
+            <button onclick="addToCart(9, 'Місто дівчат', 'Елізабет Ґілберт', 400)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 10 -->
+        <div class="book-card">
+            <img src="images/for5years.jpg" alt="За 5 років">
+            <h3>За 5 років</h3>
+            <p class="author">Ребекка Сірл</p>
+            <p class="price">300 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(10, 'За 5 років', 'Ребекка Сірл', 300)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 11 -->
+        <div class="book-card">
+            <img src="images/clubofboyets.jpg" alt="Бійцівський клуб">
+            <h3>Бійцівський клуб</h3>
+            <p class="author">Чак Поланік</p>
+            <p class="price">370 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.7)</p>
+            <button onclick="addToCart(11, 'Бійцівський клуб', 'Чак Поланік', 370)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 12 -->
+        <div class="book-card">
+            <img src="images/forthwing.jpg" alt="Четверте крило. Емпіреї. Книга 1. ">
+            <h3>Четверте крило. Емпіреї. Книга 1 </h3>
+            <p class="author">Ребекка Яррос</p>
+            <p class="price">680 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.5)</p>
+            <button onclick="addToCart(12, 'Четверте крило. Емпіреї. Книга 1 ', 'Ребекка Яррос', 680)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 13 -->
+        <div class="book-card">
+            <img src="images/ironflame.webp" alt="Залізне полум’я. Емпіреї. Книга 2.">
+            <h3>Залізне полум’я. Емпіреї. Книга 2</h3>
+            <p class="author">Ребекка Яррос</p>
+            <p class="price">790 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.4)</p>
+            <button onclick="addToCart(13, 'Четверте крило. Емпіреї. Книга 2 ', 'Ребекка Яррос',790)">Додати в кошик</button>
+        </div>
+
+        <!-- Книга 14 -->
+        <div class="book-card">
+            <img src="images/snakeanddove.webp" alt="Змія і Голуб. Книга 1.">
+            <h3>Змія і Голуб. Книга 1</h3>
+            <p class="author">Шелбі Мег'юрін</p>
+            <p class="price">390 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.6)</p>
+            <button onclick="addToCart(14, 'Змія і Голуб. Книга 1', 'Шелбі Мегюрін',390)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/bloodandhoney.webp" alt="Кров і мед. Книга 2">
+            <h3>Кров і мед. Книга 2</h3>
+            <p class="author">Шелбі Мег'юрін</p>
+            <p class="price">475 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.6)</p>
+            <button onclick="addToCart(15, 'Кров і мед. Книга 2', 'Шелбі Мегюрін',475)">Додати в кошик</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="images/godsandmonsters.webp" alt="Боги й чудовиська. Книга 3.">
+            <h3>Боги й чудовиська. Книга 3</h3>
+            <p class="author">Шелбі Мег'юрін</p>
+            <p class="price">475 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️ (4.6)</p>
+            <button onclick="addToCart(16, 'Боги й чудовиська. Книга 3', 'Шелбі Мегюрін', 475)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi1.jpg" alt="У напрямку до нуля">
+            <h3>У напрямку до нуля</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(17, 'У напрямку до нуля', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi2.jpg" alt="Поїзд о 4:50 з Педдінґтона">
+            <h3>Поїзд о 4:50 з Педдінґтона</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(18, 'Поїзд о 4:50 з Педдінґтона', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi3.jpg" alt="Убивство в будинку вікарія">
+            <h3>Убивство в будинку вікарія</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(19, 'Убивство в будинку вікарія', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi4.jpg" alt="І не лишилось жодного">
+            <h3>І не лишилось жодного</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(20, 'І не лишилось жодного', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi5.jpg" alt="Вбивство у «Східному експресі»">
+            <h3>Вбивство у «Східному експресі»</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(21, 'Вбивство у «Східному експресі»', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi6.jpg" alt="Убивства за абеткою">
+            <h3>Убивства за абеткою</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(22, 'Убивства за абеткою', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi7.jpg" alt="Тіло у бібліотеці">
+            <h3>Тіло у бібліотеці</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(23, 'Тіло у бібліотеці', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+        <div class="book-card">
+            <img src="images/agatacristi8.jpg" alt="Тріснуло дзеркало">
+            <h3>Тріснуло дзеркало</h3>
+            <p class="author">Аґата Крісті</p>
+            <p class="price">230 грн</p>
+            <p class="rating">⭐️⭐️⭐️⭐️⭐️ (4.8)</p>
+            <button onclick="addToCart(24, 'Тріснуло дзеркало', 'Аґата Крісті', 230)">Додати в кошик</button>
+        </div>
+
+    </div>
+</div>
+</section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Про нас</h3>
+                <p>Ми - онлайн-магазин книг, що пропонує
+                     широкий вибір літератури для всіх поколінь.</p>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Email: <a href="mailto:info@bookstore.com">info@bookstore.com</a></p>
+                <p>Телефон: <a href="tel:+380988112334">+380 988 112 334</a></p>
+                <p>Адреса: вул. Книжкова, 12, Київ</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 BookStore | Всі права захищені</p>
+        </div>
+    </footer>
+    
+<script src="script.js"></script>
+<script src="theme.js"></script>
+
+</body>
+</html>

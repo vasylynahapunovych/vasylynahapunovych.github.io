@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій акаунт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🔹 Навігаційне меню -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">КАТАЛОГ</a></li>
+                <li>
+                    <a href="cart.html">КОШИК <span id="cart-count" class="cart-badge">0</span></a>
+                  </li> 
+                <li><a href="account.html">МІЙ АКАУНТ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Інформація про акаунт -->
+    <main>
+        <section class="account">
+        
+          <!-- 🔹 ПРОФІЛЬ КОРИСТУВАЧА -->
+          <div class="account-profile">
+          <img src="images/profile-default.png" alt="Фото профілю" class="profile-img">
+          <div class="profile-info">
+          <h2>Профіль</h2>
+          <p><strong>Ім'я користувача:</strong> <span id="user-name">Гапунович Василина</span></p>
+          <p><strong>Email:</strong> <span id="user-email">vasylynagap@example.com</span></p>
+          <p><strong>Телефон:</strong> <span id="user-phone">+380 123 456 789</span></p>
+          <p><strong>Дата народження:</strong> <span id="user-birthdate">15.04.2000</span></p>
+          </div>
+        </div>
+  
+          <hr>
+      
+          <!-- 🔹 ІСТОРІЯ ПОКУПОК -->
+          <div class="purchase-history-section">
+            <h2>Історія покупок</h2>
+            <ul id="purchase-history">
+              <li>У вас ще немає покупок.</li>
+            </ul>
+          </div>
+      
+          <hr>
+      
+          <!-- 🔹 НАЛАШТУВАННЯ -->
+          <div class="settings">
+            <h2>Налаштування</h2>
+            <label>
+              <input type="checkbox" id="darkModeToggle">
+              Темна тема
+            </label>
+          </div>
+      
+        </section>
+      </main>
+      
+    
+
+    <!-- 🔹 JavaScript -->
+    <script src="account.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+</html>
